@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@300;400;500;600;700;800;900&family=Gulzar&family=Reem+Kufi:wght@500;700&display=swap");
+:root {
+  --color1: #f6f6f6;
+  --color2: #151515;
+  --color3: #219d80;
+  --color4: #0c6434;
+  --color5: #fcfffe;
+  --color6: #edf7f5;
+  --color7: #d9f5ee;
+  --color8: rgb(49, 9, 54);
+  --color9: #f2f2f2;
+  --color10: #00000098;
+  --font1: "Cairo", sans-serif;
+  --font2: "Amiri", serif;
+  --font3: "Gulzar", serif;
+  --border: 1px solid var(--color4);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font1);
+}
+
+.visible-xxs {
+  display: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font2);
+  font-size: 16px;
+  color: var(--color2);
+  font-weight: 400;
+  background-color: var(--color1);
+}
+
+h1, h2, h3, h4 {
+  color: var(--color2);
+  font-family: var(--font1);
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+button, .btn {
+  all: unset;
+  padding: 1.5rem 4rem;
+  background-color: var(--color4);
+  color: var(--color1);
+  line-height: 0;
+  font-size: 18px;
+  transition: all 0.25s linear;
+  border: 1px solid var(--color4);
+  cursor: pointer;
+}
+button:hover, button:focus, .btn:hover, .btn:focus {
+  border-top-right-radius: 16px;
+}
+
+.secBtn {
+  all: unset;
+  padding: 0.5rem 4rem;
+  background-color: var(--color1);
+  border: 1px solid var(--color4);
+  color: var(--color4);
+  font-size: 18px;
+  transition: all 0.25s linear;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.secBtn:hover, .secBtn:focus {
+  border-bottom-left-radius: 16px;
+}
+
+img {
+  width: 312px;
+  height: 312px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: var(--border);
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  margin: 2rem auto;
+  border-bottom: var(--border);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  text-align: right;
+}
+.main .threeDAreaa {
+  width: 50%;
+}
+.main .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: var(--color4);
+}
+
+#loading-bar {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #eee;
+  z-index: 999;
+}
+
+#loading-bar-progress {
+  height: 100%;
+  background-color: #2196f3;
+  width: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 550px) {
+  h2 {
+    font-weight: 900;
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+  button, .btn {
+    padding: 1.5rem 1rem;
+  }
+  .secBtn {
+    padding: 0.5rem 1rem;
+  }
+  .main {
+    flex-direction: column;
+    width: 100vw;
+    gap: 1rem;
+  }
+  .main .threeDAreaa {
+    width: 100%;
+    height: 70vh;
+    border: var(--border);
+    overflow: hidden;
+    position: relative;
+  }
+  .main .info p {
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 551px) {
+  body, html {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
