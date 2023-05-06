@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="description" content="welcome to Mustafa Saad's project in three js | اهلا بكم في موقعي الذي بنيته لتخليد ذكرى شاعرين عظيميين">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="author" content="Mustafa Saad">
+    <meta name="keywords" content="محمد مهدي الجواهري، محمود درويش، شاعر، كاتب، شخصيات أدبية، الشعر العربي، الأدب العربي، الثقافة العربية، الشعر الفلسطيني، الأدب الفلسطيني، الشعر العربي الحديث، الشعراء العرب، الشعر الحديث، الأدباء العرب، الأدب الحديث، الأدب الشعبي، الأدب القديم، الأدب الكلاسيكي، الأدب الحديث، الأدب الروائي، الأدب القصصي، الأدب العربي الإسلامي، الأدب العربي الحديث، الأدب العربي الكلاسيكي، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب العربي الحديث، الأدب">
+    <link rel="icon" type="image/png" href="assets/sources/images/favicon.png">
+    <title>ذكرى عظيمان</title>
+</head>
+<body>
+    <div class="main">
+        <h2>ذكرى عظيمان: لإرثكما أن يُقدّس</h2>
+        <div id="loading-bar">
+            <div id="loading-bar-progress"></div>
+          </div>
+        <div class="overlay" style="text-align: center;">يتم التحميل...</div>          
+        <div class="threeDAreaa" id="scene"></div>
+        <div class="buttons">             
+            <button id="jawahri" class="secBtn out">الجواهري</button>
+            <button id="drwish" class="secBtn out">درويش</button>              
+            <button id="turn-btn" class="secBtn">إفتح الانوار</button>
+        </div>
+        <div class="info" id="infoContainer">
+            <p>يأتي هذا العمل البسيط في ذكرى لتخليد شاعرين قريبين من قلبي، ولِحفظ إرثهما للاجيال الحالية والقادمة.</p>
+            <p>تعريف المعرف من الأمور التي لا أفلح بها، وها هما "محمد مهدي الجواهري ومحمود درويش" معرفان بلغة الضاد وبلغة العشاق وبجميع لغات هذا العالم.</p>
+            <p>إستخدمت في عملي هذا لغة البرمجة (Three.js) والتي سمحت لي ببناء غرفة الشعر المصغرة الالكترونية هذه. كما أتاح لي (Vectary3D.com) بعض الاشكال التي قمت بتعديلها وإضافتها.</p>
+            <p>(ChatGPT) هو الاخر كان حاضرا لكل سؤال لم أعرف اجابته وساعدني كثيرا في اجتياز المعوقات التي واجهتني.</p>
+            <p>أما اخيرا فشكرا لـ(Osama Hussien/Amina Kourani) اللذين تمكنت من تنزيل قصائد الشاعرين الفيديوية من قناتيهما على (YouTube.com) وعدّلتها لتتماشى مع بيئة العمل.</p>
+            <p>سيكون الكود البرمجي متاحا للعامة ويمكن لأي شخص إستخدامه وتعديله وتطويره كيفما يشاء سواء تجاريا أو لاهداف التعلم الشخصية، مع ذكر تقديري لي ولكل من ذكرتهم آنفا.</p>
+            <p>تبدأ رحلاتنا ولا تتوقف، خصوصا تلك التي نتعلم منها. ها انا تعلمت اليوم شيئا جديدا عسى أن تتعلم أنت ايضا وتكون أفضل مما كنت عليه في الامس. إسعَ للتعلم دائما ولا تتوقف.</p>
+            <p>أنا: "مصطفى سعد" أكتب الادب، أؤلف الموسيقى الكلاسيكية، أحب البرمجة والتصميم. وها هو عمل آخر لي سدّ فجوة الفضول المعرفي لدي لبعض من الوقت.</p>
+            <p>أدبيا لي رواية وبعض مقالات وخواطر، موسيقيا لي بضع قطع هاوية للأوركسترا الكلاسيكية. برمجيا لي هذا العمل البسيط الذي اتمنى أن ينال إعجابكم وموقعي الشخصي.</p>
+            <p class="note">مصطفى سعد | 2023 - مايس - 5 ، الجمعة</p>
+        </div>
+        <a href="code.html" class="secBtn">الكود البرمجي</a>
+        <a href="https://mustafasaad.tk" class="secBtn">تواصل معي</a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
