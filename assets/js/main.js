@@ -241,7 +241,7 @@ button.addEventListener('click', function() {
   }
   if (clicks === 1) {
       tween = new TWEEN.Tween(environmentLight)
-          .to({ intensity: 0.5 }, 1000)
+          .to({ intensity: 0.9 }, 1000)
           .easing(TWEEN.Easing.Quadratic.Out)
           .start();
       button.textContent = "أغلق الانوار";
