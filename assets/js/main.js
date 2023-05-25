@@ -171,10 +171,10 @@ function loadModel(modelPath, position, rotation) {
     });
   }
 }
-loadModel('./assets/sources/models/booksPadHolderClips.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
-loadModel('./assets/sources/models/chairLampBin.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
-loadModel('./assets/sources/models/table.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
-loadModel('./assets/sources/models/laptop.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
+// loadModel('./assets/sources/models/booksPadHolderClips.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
+// loadModel('./assets/sources/models/chairLampBin.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
+// loadModel('./assets/sources/models/table.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
+// loadModel('./assets/sources/models/laptop.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
 loadModel('./assets/sources/models/origamyOBook.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
 
 const fontLoader = new THREE.FontLoader();
@@ -239,12 +239,27 @@ button.addEventListener('click', function() {
   if (tween !== null) {
     tween.stop();
   }
+  
+  // Fullscreen API
+  var docElement = document.documentElement;
+  var fullScreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen;
+  
   if (clicks === 1) {
-      tween = new TWEEN.Tween(environmentLight)
-          .to({ intensity: 0.9 }, 1000)
-          .easing(TWEEN.Easing.Quadratic.Out)
-          .start();
-      button.textContent = "أغلق الانوار";
+    if (fullScreenEnabled) {
+      if (docElement.requestFullscreen) {
+        docElement.requestFullscreen();
+      } else if (docElement.mozRequestFullScreen) {
+        docElement.mozRequestFullScreen();
+      } else if (docElement.webkitRequestFullScreen) {
+        docElement.webkitRequestFullScreen();
+      }
+    }
+    
+    tween = new TWEEN.Tween(environmentLight)
+        .to({ intensity: 0.9 }, 1000)
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .start();
+    button.textContent = "أغلق الانوار";
   } else {
     tween = new TWEEN.Tween(environmentLight)
         .to({ intensity: 0 }, 1000)
