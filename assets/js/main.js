@@ -171,10 +171,10 @@ function loadModel(modelPath, position, rotation) {
     });
   }
 }
-// loadModel('./assets/sources/models/booksPadHolderClips.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
-// loadModel('./assets/sources/models/chairLampBin.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
-// loadModel('./assets/sources/models/table.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
-// loadModel('./assets/sources/models/laptop.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
+loadModel('./assets/sources/models/booksPadHolderClips.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
+loadModel('./assets/sources/models/chairLampBin.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
+loadModel('./assets/sources/models/table.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
+loadModel('./assets/sources/models/laptop.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
 loadModel('./assets/sources/models/origamyOBook.glb', new THREE.Vector3(0, 0, 0), new THREE.Euler(0,0, 0));
 
 const fontLoader = new THREE.FontLoader();
@@ -245,15 +245,15 @@ button.addEventListener('click', function() {
   var fullScreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen;
   
   if (clicks === 1) {
-    if (fullScreenEnabled) {
-      if (docElement.requestFullscreen) {
-        docElement.requestFullscreen();
-      } else if (docElement.mozRequestFullScreen) {
-        docElement.mozRequestFullScreen();
-      } else if (docElement.webkitRequestFullScreen) {
-        docElement.webkitRequestFullScreen();
-      }
-    }
+//     if (fullScreenEnabled) {
+//       if (docElement.requestFullscreen) {
+//         docElement.requestFullscreen();
+//       } else if (docElement.mozRequestFullScreen) {
+//         docElement.mozRequestFullScreen();
+//       } else if (docElement.webkitRequestFullScreen) {
+//         docElement.webkitRequestFullScreen();
+//       }
+//     }
     
     tween = new TWEEN.Tween(environmentLight)
         .to({ intensity: 0.9 }, 1000)
