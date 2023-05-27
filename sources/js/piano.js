@@ -43,63 +43,12 @@ controls.target.set(0,0,0);
 
 
 const planeGeometry = new THREE.BoxGeometry(7,0.1,4);
-const planeMaterial = new THREE.MeshPhongMaterial({shininess: 150});
+const planeMaterial = new THREE.MeshPhongMaterial({shininess: 150, color: 'rgb(150,20,20)'});
 const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 plane.receiveShadow = true;
 scene.add(plane);
 // plane.rotation.set(-Math.PI/2,0,0);
 plane.position.set(0.275,-0.2,0);
-
-// Load textures
-const textureLoader = new THREE.TextureLoader();
-const aoTexture = textureLoader.load('sources/textures/ao.jpg');
-const diffuseTexture = textureLoader.load('sources/textures/diff.jpg');
-// const displacementTexture = textureLoader.load('sources/textures/disp.jpg');
-const normalDxTexture = textureLoader.load('sources/textures/dx.jpg');
-const normalGlTexture = textureLoader.load('sources/textures/gl.jpg');
-const roughTexture = textureLoader.load('sources/textures/ro.jpg');
-
-planeMaterial.map = diffuseTexture;
-planeMaterial.aoMap = aoTexture;
-// planeMaterial.displacementMap = displacementTexture;
-planeMaterial.normalMap = normalDxTexture;
-planeMaterial.normalMapType = THREE.TangentSpaceNormalMap;
-planeMaterial.bumpMap = normalGlTexture;
-planeMaterial.roughnessMap = roughTexture;
-
-planeMaterial.needsUpdate = true;
-
-
-
-
-// sources/textures/ro.jpg
-
-
-
-const keysLight = new THREE.MeshPhongMaterial({shininess: 250, color: 'rgb(250,250,250)'});
-
-const textureLoader1 = new THREE.TextureLoader();
-const aoTexture1 = textureLoader.load('sources/textures/ao1.jpg');
-const diffuseTexture1 = textureLoader.load('sources/textures/diff1.jpg');
-// const displacementTexture = textureLoader.load('sources/textures/disp.jpg');
-const normalDxTexture1 = textureLoader.load('sources/textures/dx1.jpg');
-const normalGlTexture1 = textureLoader.load('sources/textures/gl1.jpg');
-const roughTexture1 = textureLoader.load('sources/textures/ro1.jpg');
-
-keysLight.map = diffuseTexture1;
-keysLight.aoMap = aoTexture1;
-// planeMaterial.displacementMap = displacementTexture;
-keysLight.normalMap = normalDxTexture1;
-keysLight.normalMapType = THREE.TangentSpaceNormalMap1;
-keysLight.bumpMap = normalGlTexture1;
-keysLight.roughnessMap = roughTexture1;
-
-keysLight.needsUpdate = true;
-
-
-
-
-
 
 
 
@@ -221,15 +170,6 @@ function resetPosition1(index) {
       .start();
   };
 }
-
-
-
-
-
-
-
-
-
 
 
 const geometry3 = new THREE.BoxGeometry(0.3, 0.2, 1.5);
