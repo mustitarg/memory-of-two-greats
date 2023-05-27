@@ -104,7 +104,7 @@ keysLight.needsUpdate = true;
 
 
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, .5);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
 directionalLight.position.set(5, 5, 0);
 directionalLight.castShadow = true;
 scene.add(directionalLight);
