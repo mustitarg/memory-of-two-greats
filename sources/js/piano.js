@@ -123,7 +123,7 @@ const boxes = [];
 
 // Create and position the boxes
 [-1.65, -1.1, -0.55, 0, 0.55, 1.1, 1.65, 2.2].forEach((positionX, index) => {
-  const box = new THREE.Mesh(geometry1, index % 2 === 0 ? keysLight : material2);
+  const box = new THREE.Mesh(geometry1, index % 2 === 0 ? material1 : material2);
   box.position.x = positionX;
   box.castShadow = true;
   box.receiveShadow = true;
