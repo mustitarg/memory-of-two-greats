@@ -171,7 +171,7 @@ function onDocumentClick(event) {
     const clickedObject = intersects[0].object;
     const index = boxes.indexOf(clickedObject);
     if (index !== -1) {
-      const audio = new Audio(`sources/notes/${index + 6}.mp3`);
+      const audio = new Audio(`./sources/notes/${index + 6}.mp3`);
       audio.play();
 
       tweens[index].rotationTween.start();
@@ -285,7 +285,7 @@ const boxes1 = [];
     if (intersects.length > 0) {
       handleClick();
       if (index !== -1) {
-        const audio = new Audio(`sources/notes/${index + 50}.mp3`);
+        const audio = new Audio(`./sources/notes/${index + 50}.mp3`);
         audio.play();}
     }
   });
